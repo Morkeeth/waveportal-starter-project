@@ -104,8 +104,9 @@ const App = () => {
         let count = await wavePortalContract.getTotalWaves();
         console.log("Retrieved total wave count...", count.toNumber());
 
-        const waveTxn = await wavePortalContract.wave();
-        console.log("Mining...", waveTxn.hash);
+        const waveTxn = await wavePortalContract.wave("this is a messagee",
+          { gasLimit: 300000 });
+          console.log("mining...", waveTxn.hash);
 
         await waveTxn.wait();
         console.log("Mined -- ", waveTxn.hash);
@@ -128,15 +129,15 @@ const App = () => {
     <div className="mainContainer">
       <div className="dataContainer">
         <div className="header">
-          👋 Hey there!
+          👋🍺 Make a wish!
         </div>
 
-        <div className="bio">
-          I am farza and I worked on self-driving cars so that's pretty cool right? Connect your Ethereum wallet and wave at me!
-        </div>
+        <h3 className="bio">
+          To cherish the festive season I want to give the opportunity for people to wish for a beer. Setup by the Stockholm Crypto Bar initiative.
+        </h3>
 
         <button className="waveButton" onClick={wave}>
-          Wave at Me
+          Wish for a beer
         </button>
 
         {!currentAccount && (
