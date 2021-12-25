@@ -8,6 +8,7 @@ const App = () => {
   const [allWaves, setAllWaves] = useState([]);
 
   const contractAddress = "0x1F3a457ef641eBe68E2b16e3e4db230b7BD1C8C2";
+  // eslint-disable-next-line
   const getAllWaves = async () => {
     try {
       const { ethereum } = window;
@@ -16,9 +17,6 @@ const App = () => {
         const signer = provider.getSigner();
         const wavePortalContract = new ethers.Contract(contractAddress, contractABI, signer);
 
-        /*
-         * Call the getAllWaves method from your Smart Contract
-         */
         const waves = await wavePortalContract.getAllWaves();
         
 
@@ -124,6 +122,7 @@ const App = () => {
   useEffect(() => {
     checkIfWalletIsConnected();
   }, [])
+  
   
   return (
     <div className="mainContainer">
