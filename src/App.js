@@ -132,6 +132,7 @@ const App = () => {
         <div className="header"> 
         
            Make a wish!
+        
         </div>
 
         <h3 className="bio">
@@ -139,7 +140,7 @@ const App = () => {
         </h3>
 
         <button className="waveButton" onClick={wave}>
-        🍺👋 Wish for a beer
+        Wish for a beer
         </button>
 
         {!currentAccount && (
