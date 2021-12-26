@@ -127,8 +127,11 @@ const App = () => {
   return (
     <div className="mainContainer">
       <div className="dataContainer">
-        <div className="header">
-          👋🍺 Make a wish!
+        
+        
+        <div className="header"> 
+        
+           Make a wish!
         </div>
 
         <h3 className="bio">
