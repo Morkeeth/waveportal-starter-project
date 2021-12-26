@@ -139,7 +139,7 @@ const App = () => {
         </h3>
 
         <button className="waveButton" onClick={wave}>
-          Wish for a beer
+        🍺👋 Wish for a beer
         </button>
 
         {!currentAccount && (
